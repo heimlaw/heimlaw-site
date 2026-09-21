@@ -5,5 +5,5 @@
 window.HEIMLAW_CONFIG = {
   phoneDisplay: "070-8919-8319",
   phoneHref: "02-6008-8119",
-  consultationHours: "평일 09:~18:00 | 사전 예약필수"
+  consultationHours: "평일 09:00~18:00 | 사전 예약필수"
 };
