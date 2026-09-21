@@ -485,40 +485,25 @@ img {
 
 .portrait-panel {
   position: relative;
-  display: grid;
-  aspect-ratio: 4 / 5;
-  place-items: center;
+  aspect-ratio: 404 / 580;
   overflow: hidden;
   color: white;
-  background:
-    radial-gradient(circle at 70% 30%, rgba(177, 139, 86, 0.32), transparent 32%),
-    linear-gradient(145deg, var(--green-soft), #111816 75%);
+  background: #d4d4d4;
 }
 
-.portrait-panel::before,
 .portrait-panel::after {
   position: absolute;
-  content: "";
-  border: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.portrait-panel::before {
-  inset: 28px;
-}
-
-.portrait-panel::after {
-  width: 68%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-}
-
-.portrait-monogram {
-  position: relative;
   z-index: 1;
-  color: var(--bronze-light);
-  font-family: var(--serif);
-  font-size: clamp(80px, 11vw, 140px);
-  font-weight: 400;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(15, 21, 19, 0.72) 0%, rgba(15, 21, 19, 0.12) 28%, transparent 48%);
+  content: "";
+}
+
+.portrait-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .portrait-caption {
@@ -573,6 +558,30 @@ img {
 .credentials dd {
   margin: 0;
   color: #4b514e;
+}
+
+.career-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.career-list li {
+  position: relative;
+  padding-left: 13px;
+}
+
+.career-list li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background: var(--bronze);
+  content: "";
 }
 
 .section-insights {
@@ -714,12 +723,14 @@ img {
 .footer-brand {
   width: fit-content;
   align-self: start;
-  padding: 10px 12px;
-  background: var(--ivory);
+  padding: 0;
+  background: transparent;
 }
 
 .footer-brand .brand-logo {
   width: 255px;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
 }
 
 .footer-info {
@@ -1053,6 +1064,10 @@ img {
   .detail-row {
     grid-template-columns: 1fr;
     gap: 5px;
+  }
+
+  .career-list {
+    grid-template-columns: 1fr;
   }
 
   .insight-list > a {
