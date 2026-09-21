@@ -93,16 +93,18 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--ink);
+  background: rgba(250, 249, 245, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
   transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 .site-header.is-scrolled {
   color: var(--ink);
-  background: rgba(250, 249, 245, 0.96);
+  background: rgba(250, 249, 245, 0.98);
   border-color: var(--line);
-  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 32px rgba(18, 25, 23, 0.06);
 }
 
 .header-inner {
@@ -115,37 +117,13 @@ img {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 13px;
+  line-height: 0;
 }
 
-.brand-mark {
-  display: grid;
-  width: 35px;
-  height: 35px;
-  place-items: center;
-  color: var(--bronze-light);
-  border: 1px solid currentColor;
-  font-family: Georgia, serif;
-  font-size: 20px;
-  line-height: 1;
-}
-
-.brand-text {
-  display: grid;
-  gap: 1px;
-}
-
-.brand-text strong {
-  font-family: var(--serif);
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-.brand-text small {
-  font-size: 9px;
-  letter-spacing: 0.19em;
-  opacity: 0.72;
+.brand-logo {
+  width: 270px;
+  height: auto;
+  object-fit: contain;
 }
 
 .primary-nav {
@@ -182,8 +160,8 @@ img {
 
 .nav-cta {
   padding: 10px 15px;
-  color: var(--charcoal);
-  background: var(--bronze-light);
+  color: white;
+  background: var(--green);
 }
 
 .menu-button {
@@ -734,8 +712,14 @@ img {
 }
 
 .footer-brand {
+  width: fit-content;
   align-self: start;
-  color: white;
+  padding: 10px 12px;
+  background: var(--ivory);
+}
+
+.footer-brand .brand-logo {
+  width: 255px;
 }
 
 .footer-info {
@@ -903,7 +887,7 @@ img {
   .primary-nav .nav-cta {
     margin-top: 22px;
     padding: 14px 18px;
-    color: var(--charcoal);
+    color: white;
     border: 0;
     font-family: var(--sans);
     font-size: 14px;
@@ -911,9 +895,9 @@ img {
   }
 
   .site-header.is-menu-open {
-    color: white;
-    background: transparent;
-    border-color: rgba(255, 255, 255, 0.14);
+    color: var(--ink);
+    background: var(--paper);
+    border-color: var(--line);
   }
 
   .hero {
@@ -983,12 +967,8 @@ img {
     font-size: 15px;
   }
 
-  .brand-text strong {
-    font-size: 15px;
-  }
-
-  .brand-text small {
-    font-size: 8px;
+  .brand-logo {
+    width: 215px;
   }
 
   .hero {
@@ -1105,6 +1085,10 @@ img {
 
   .footer-brand {
     grid-column: auto;
+  }
+
+  .footer-brand .brand-logo {
+    width: 220px;
   }
 
   .footer-links {

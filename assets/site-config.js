@@ -3,7 +3,7 @@
  * 값이 비어 있으면 해당 항목은 화면에서 자동으로 숨겨집니다.
  */
 window.HEIMLAW_CONFIG = {
-  phoneDisplay: "",
-  phoneHref: "",
-  consultationHours: ""
+  phoneDisplay: "070-8919-8319",
+  phoneHref: "02-6008-8119",
+  consultationHours: "평일 09:~18:00 | 사전 예약필수"
 };
